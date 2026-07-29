@@ -1,0 +1,136 @@
+[
+  {
+    "naslov": "Barbie",
+    "godina": 2023,
+    "zanr": ["comedy", "drama"],
+    "duzina": "1:54",
+    "glumci": [
+      "Margot Robbie",
+      "Ryan Gosling",
+      "Will Ferrell"
+    ],
+    "imdb": 7.4
+  },
+  {
+    "naslov": "Oppenheimer",
+    "godina": 2023,
+    "zanr": ["triler", "biography"],
+    "duzina": "3:00",
+    "glumci": [
+      "Cillian Murphy",
+      "Florence Pugh",
+      "Robert Downey Jr.",
+      "Emily Blunt"
+    ],
+    "imdb": 8.7
+  },
+  {
+    "naslov": "Spider-Man: No Way Home",
+    "godina": 2021,
+    "zanr": ["action", "sci-fy", "superhero"],
+    "duzina": "2:28",
+    "glumci": [
+      "Tom Holland",
+      "Zendaya",
+      "Tobey Maguire",
+      "Andrew Garfield"
+    ],
+    "imdb": 8.2
+  },
+  {
+    "naslov": "The Batman",
+    "godina": 2022,
+    "zanr": ["action", "thriller", "superhero"],
+    "duzina": "2:56",
+    "glumci": [
+      "Robert Patinson",
+      "Zoe Kravitz",
+      "Paul Dano"
+    ],
+    "imdb": 7.8
+  },
+  {
+    "naslov": "Dune",
+    "godina": 2021,
+    "zanr": ["sci-fi", "action", "adventure"],
+    "duzina": "2:35",
+    "glumci": [
+      "Timothee Chalamet",
+      "Zendaya",
+      "Rebecca Ferguson"
+    ],
+    "imdb": 8.0
+  },
+  {
+    "naslov": "Titanic",
+    "godina": 1997,
+    "zanr": ["romance", "drama"],
+    "duzina": "3:14",
+    "glumci": [
+      "Kate Winslet",
+      "Leonardo DiCaprio"
+    ],
+    "imdb": 7.9
+  },
+  {
+    "naslov": "Inception",
+    "godina": 2010,
+    "zanr": ["action", "sci-fy"],
+    "duzina": "2:28",
+    "glumci": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt"
+    ],
+    "imdb": 8.8
+  },
+  {
+    "naslov": "Minions",
+    "godina": 2015,
+    "zanr": ["comedy", "kids", "animation"],
+    "duzina": "1:31",
+    "glumci": [
+      "Steve Carell",
+      "Pierre Coffin",
+      "Steve Coogan"
+
+    ],
+    "imdb": 6.4
+  },
+  {
+    "naslov": "Fight Club",
+    "godina": 1999,
+    "zanr": ["drama", "action", "triler"],
+    "duzina": "2:19",
+    "glumci": [
+      "Brad Pitt",
+      "Edward Norton",
+      "Meat Loaf"
+    ],
+    "imdb": 8.8
+  },
+  {
+    "naslov": "The Godfather",
+    "godina": 1997,
+    "zanr": ["drama", "crime"],
+    "duzina": "2:55",
+    "glumci": [
+      "Marlon Brando",
+      "Al Pacino",
+      "James Caan",
+      "Diana Keaton"
+    ],
+    "imdb": 9.2
+  },
+  {
+    "naslov": "Pirates of the Caribbean",
+    "godina": 2003,
+    "zanr": ["fantasy"],
+    "duzina": "2:33",
+    "glumci": [
+      "Johnny Depp",
+      "Orlando Bloom",
+      "Keira Knightley"
+    ],
+    "imdb": 8.1
+  }
+]

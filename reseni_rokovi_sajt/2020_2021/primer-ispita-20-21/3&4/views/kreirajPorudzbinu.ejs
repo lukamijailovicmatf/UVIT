@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Status porudzbine</title>
+    <link rel="stylesheet" type="text/css" href="/css/stil.css" />
+</head>
+
+<body>
+    <% if (typeof id_artikla === 'undefined') { %>
+        <main>
+            <h1>Identifikator proizvoda ne postoji. Vratite se na prethodnu stranicu.</h1>
+            <a href="/artikal">Pocetna stranica</a>
+        </main>
+    <% } else { %>
+        <header>
+            <h1>Status porudzbine</h1>
+        </header>
+        <main>
+            <% if (!status) { %>
+                <p>Postoji problem sa Vasom narudzbinom: <%= razlog %></p>
+                <a href="/artikal">Pocetna stranica</a>
+            <% } else { %>
+                <p>Uspesno ste narucili proizvod!</p>
+                <script>
+                    function zapocni_odbrojavanje() {
+                        setTimeout(function () {
+                            document.location = '/artikal';
+                        }, 10000);
+                    }
+                    zapocni_odbrojavanje();
+                </script>
+            <% } %>
+        </main>
+    <% } %>
+</body>
+
+</html>

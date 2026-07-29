@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./1.css" rel="stylesheet">
+</head>
+<body>
+    <h1> <%= turnir %> </h1>
+
+    <div id="line"></div>
+
+    <% for(let igra of igre) { %>
+    <div class="game">
+        <table>
+            <tr>
+                <td> Vreme: <%= igra.vreme %></td>
+            </tr>
+            <tr>
+                <td> <%= igra.igrac1%></td>
+                <% for(let p of igra.poeni1.split('-')){%>
+                    <td><%= p %></td>
+                <%}%>
+            </tr>
+            <tr>
+                <td> <%= igra.igrac2%></td>
+                <% for(let p of igra.poeni2.split('-')){%>
+                    <td><%= p %></td>
+                <%}%>
+            </tr>
+        </table>
+    </div>
+    <%}%>
+
+
+    <h1>Dodaj igru</h1>
+    <form method="get" action="/unesiturnir">
+        <input type="text" name="turnir" value="<%= turnir%>" hidden>
+        <table>     
+            <tr>
+                <td> Vreme: <input type="number" name="sati" placeholder="hh">:<input type="number" name="minuti" placeholder="mm"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="igrac1" placeholder="prvi igrac"></td>
+                <td><input type="number" name="a1"></td>
+                <td><input type="number" name="a2"></td>
+                <td><input type="number" name="a3"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="igrac2" placeholder="drugi igrac"></td>
+                <td><input type="number" name="b1"></td>
+                <td><input type="number" name="b2"></td>
+                <td><input type="number" name="b3"></td>
+            </tr>
+        </table>
+        <input type="submit" value="unesi igru">
+    </form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap.css">
+    <link rel="stylesheet" href="/1.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1><%= film.naslov %></h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Informacije</h3>
+                <table>
+                    <tr>
+                        <td>Godina</td>
+                        <td><%= film.godina %></td>
+                    </tr>  
+                    <tr>
+                        <td>Duzina</td>
+                        <td><%= film.duzina %></td>
+                    </tr>    
+                    <tr>
+                        <td>Imdb</td>
+                        <td><%= film.imdb %></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-4">
+                <h3>Glumci</h3>
+                <ul>
+                    <% for(let glumac of film.glumci) { %>
+                        <li> <%= glumac%></li>
+                    <% } %>
+
+                    <% if (film.glumci.length <5) {%>
+                    <li>
+                        <form method="post" action="/noviglumac">
+                            <input type="hidden" class="form-control" name="id" value="<%= film._id %>">
+                            <input type="text" class="form-control" name="glumac">
+                            <input type="submit" value="unesi" class="btn btn-success btn-block">
+                        </form>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h3>Zanr</h3>
+                <ul>
+                <% for(let zanr of film.zanr) { %>
+                    <li><%= zanr%></li>
+                <% } %>
+                </ul>     
+            </div>
+
+    </div>
+    <div class="row">
+        <a href="/" class="btn btn-block btn-outline-primary">Nazad</a>
+    </div>
+    </div>
+
+</body>
+</html>

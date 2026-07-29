@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <style>
+        td {
+            border-bottom: solid gray 1px;
+        }
+
+        td:nth-child(2) {
+            font-weight: bold;
+        }
+
+        table {
+            margin: 10px;
+            border: dotted black 2px;
+            width: 90%;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: pink;
+            background-image: linear-gradient(pink, white);
+
+        }
+
+        .procitano {
+            border: solid green;
+ 
+
+        }
+
+        .neprocitano {
+            border: solid red;
+        }
+
+        .procitano, .neprocitano {
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        span{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-12"><%= knjiga.title%></h1>
+        </div>
+        <div class="row">
+            <div class="offset-3"></div>
+            <div class="col-6 <%= knjiga.read ? "procitano" : "neprocitano" %>">
+                Ova knjiga je napisana od strane <span> <%= knjiga.author%> </span>. Ima <span> <%= knjiga.pages%> </span> strana i napisana je <span> <%= knjiga.year%> </span> godine.
+
+                <a href="/" class="btn-outline-primary btn-block">Nazad</a>
+            </div>
+            <div class="offset-3"></div>
+        </div>
+    </div>
+</body>
+</html>

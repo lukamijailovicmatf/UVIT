@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./1.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+</head>
+<body>
+    <div class="container box">
+        <h1>Filmovi</h1>
+
+        
+            <div class="row">
+                
+            
+
+                <div class="col-sm-12 col-md-4 border border-primary rounded">
+                    <!-- <img src="./film.png" alt=""> -->
+                    <hr>
+                    <h2> Barbie </h2>
+                    <hr>
+                    <h3>Glumci</h3>
+                    <ul>
+                        
+                            <li> Margot Robbie</li>
+                        
+                            <li> Ryan Gosling</li>
+                        
+                            <li> Will Ferrell</li>
+                        
+                    </ul>
+                    <h3>Zanr</h3>
+                    <ul>
+                        
+                            <li> komedija</li>
+                        
+                            <li> drama</li>
+                             
+                    </ul>
+                    <form method="get" action="/film">
+                        <input type="text" value="66754e277debf034f2f12723" name="naslov" hidden>
+                        <input type="submit" value="detaljnije" class="btn btn-outline-primary btn-block">
+                    </form>
+                </div>
+                
+
+                <div class="col-sm-12 col-md-4 border border-primary rounded">
+                    <!-- <img src="./film.png" alt=""> -->
+                    <hr>
+                    <h2> Oppenheimer </h2>
+                    <hr>
+                    <h3>Glumci</h3>
+                    <ul>
+                        
+                            <li> Cillian Murphy</li>
+                        
+                            <li> Florence Pugh</li>
+                        
+                            <li> Robert Downey Jr.</li>
+                        
+                            <li> Emily Blunt</li>
+                        
+                    </ul>
+                    <h3>Zanr</h3>
+                    <ul>
+                        
+                            <li> triler</li>
+                        
+                            <li> biografija</li>
+                             
+                    </ul>
+                    <form method="get" action="/film">
+                        <input type="text" value="66754e277debf034f2f12722" name="naslov" hidden>
+                        <input type="submit" value="detaljnije" class="btn btn-outline-primary btn-block">
+                    </form>
+                </div>
+                
+
+                <div class="col-sm-12 col-md-4 border border-primary rounded">
+                    <!-- <img src="./film.png" alt=""> -->
+                    <hr>
+                    <h2> The Batman </h2>
+                    <hr>
+                    <h3>Glumci</h3>
+                    <ul>
+                        
+                            <li> Robert Patinson</li>
+                        
+                            <li> Zoe Kravitz</li>
+                        
+                            <li> Paul Dano</li>
+                        
+                    </ul>
+                    <h3>Zanr</h3>
+                    <ul>
+                        
+                            <li> action</li>
+                        
+                            <li> thriller</li>
+                        
+                            <li> superhero</li>
+                             
+                    </ul>
+                    <form method="get" action="/film">
+                        <input type="text" value="66754e277debf034f2f1272c" name="naslov" hidden>
+                        <input type="submit" value="detaljnije" class="btn btn-outline-primary btn-block">
+                    </form>
+                </div>
+                
+            </div>
+            
+            <div class="row">
+                
+        </div>
+            
+        
+            <hr>
+            <h3>Novi film</h3>
+            <form action="/novifilm" method="post">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label>Naslov:</label> <input name="naslov" type="text" class="form-control">
+                <label> Godina:</label> <input name="godina" type="number" class="form-control">
+                <label> Duzina:</label> <input name="duzina" type="text" class="form-control">
+                <label> Imdb:</label> <input name="imdb" type="text" class="form-control">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <p>Zanr:</p>
+                <select name="zanr" multiple class="custom-select">
+                    
+                        <option>action</option>
+                    
+                        <option>adventure</option>
+                    
+                        <option>animation</option>
+                    
+                        <option>biography</option>
+                    
+                        <option>comedy</option>
+                    
+                        <option>crime</option>
+                    
+                        <option>drama</option>
+                    
+                        <option>fantasy</option>
+                    
+                        <option>kids</option>
+                    
+                        <option>romance</option>
+                    
+                        <option>sci-fi</option>
+                    
+                        <option>superhero</option>
+                    
+                        <option>tragedy</option>
+                    
+                        <option>triler</option>
+                    
+                </select>
+            </div>
+            </div>
+            <input type="submit" value="unesi" class="btn btn-primary btn-block">
+        </form>
+    </div>
+</body>
+</html>

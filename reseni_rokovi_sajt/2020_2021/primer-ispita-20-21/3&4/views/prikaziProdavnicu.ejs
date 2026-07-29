@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prodavnica</title>
+    <link rel="stylesheet" type="text/css" href="/css/stil.css" />
+</head>
+
+<body>
+    <h1>Prodavnica</h1>
+    <% for (let artikal of artikli) { %>
+        <div class="artikal">
+            <table>
+                <tr>
+                    <th style="width: 50%;">Naziv</th>
+                    <th style="width: 25%;">Cena</th>
+                    <th style="width: 25%;">Broj artikala</th>
+                </tr>
+                <tr>
+                    <th><%= artikal.naziv %></th>
+                    <th><%= artikal.cena %></th>
+                    <th><%= artikal.broj_artikala %></th>
+                </tr>
+            </table>
+    
+            <form method="GET" action="/porudzbina/napravi">
+                <input type="hidden" name="id" value="<%= artikal._id %>">
+                <input type="submit" value="Naruci proizvod">
+            </form>
+        </div>
+    <% } %>
+</body>
+
+</html>

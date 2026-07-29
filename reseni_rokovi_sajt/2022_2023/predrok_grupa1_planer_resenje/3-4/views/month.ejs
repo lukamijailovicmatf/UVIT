@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/1.css">
+
+</head>
+<body>
+    <h1> <%= month %></h1>
+    <table>
+        <tr>
+            <% for(let m of months) { %> 
+                <td><%= m %> </td>    
+            <%}%>
+        </tr>
+    </table>
+
+    <% for(let task of tasks) { %> 
+        <div class="task<%= task.celodnevna_aktivnost ? ' busy' : '' %>"> <%= task.datum.getDate() %> | <%= task.dogadjaj %>
+            <form method="post" action="/calendar/obrisi">
+                <input type="text" name='id' value="<%= task._id %>" hidden>
+                <input type="text" name='mesec' value="<%= task.mesec %>" hidden>
+                <input type="submit" value="obrisi">
+            </form>
+        </div>
+    <% } %>
+
+</body>
+</html>

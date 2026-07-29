@@ -1,0 +1,29 @@
+.cols {
+    border-radius: 10px;
+}
+
+#good {
+    /* background-image: linear-gradient(green, rgb(255, 255, 255)); */
+    border: solid green 5px;
+}
+
+.green {
+    color: green
+}
+
+.red {
+    color: red;
+}
+
+#bad {
+    /* background-image: linear-gradient(red, rgb(255, 255, 255)); */
+    border: solid red 5px;
+}
+
+.btn-link {
+    color: black;
+}
+
+img {
+    width: 100%;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/1.css">
+    <link rel="stylesheet" href="/bootstrap.css">
+</head>
+<body>
+    <div class="container box">
+        <h1>Filmovi</h1>
+
+        <% for(let i=0; i< Math.ceil(filmovi.length / 3); i++){  %>
+            <div class="row">
+                
+            <% for(let j = 0; j<3; j++) {
+                if(filmovi.length <= i*3+j) {
+                    break;
+                }
+                let film = filmovi[i*3+j]
+                %>
+
+                <div class="col-sm-12 col-md-4 border <%= film.imdb>7.5 ? 'border-success' : 'border-danger' %>  rounded">
+                    <!-- <img src="./film.png" alt=""> -->
+                    <hr>
+                    <h2> <%= film.naslov%> </h2>
+                    <hr>
+                    <h3>Glumci</h3>
+                    <ul>
+                        <% for(let glumac of film.glumci) { %>
+                            <li> <%= glumac%></li>
+                        <% } %>
+                    </ul>
+                    <h3>Zanr</h3>
+                    <ul>
+                        <% for(let zanr of film.zanr) { %>
+                            <li> <%= zanr%></li>
+                        <% } %>     
+                    </ul>
+                    <form method="get" action="/film">
+                        <input type="text" value="<%= film._id %>" name="naslov" hidden>
+                        <input type="submit" value="detaljnije" class="btn btn-outline-primary btn-block">
+                    </form>
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+        
+            <hr>
+            <h3>Novi film</h3>
+            <form action="/novifilm" method="post">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label>Naslov:</label> <input name="naslov" type="text" class="form-control">
+                <label> Godina:</label> <input name="godina" type="number" class="form-control">
+                <label> Duzina:</label> <input name="duzina" type="text" class="form-control">
+                <label> Imdb:</label> <input name="imdb" type="text" class="form-control">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <p>Zanr:</p>
+                <select name="zanr" multiple class="custom-select">
+                    <% for(let z of zanrovi) { %>
+                        <option><%= z %></option>
+                    <% } %>
+                </select>
+            </div>
+            </div>
+            <input type="submit" value="unesi" class="btn btn-primary btn-block">
+        </form>
+    </div>
+</body>
+</html>

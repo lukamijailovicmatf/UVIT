@@ -1,0 +1,78 @@
+h1 {
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+
+td {
+    border-bottom: solid gray 1px;
+}
+
+td:nth-child(2){
+    text-align: right;
+}
+td:nth-child(1){
+    font-weight: bold;
+}
+
+/* h1::before, h1::after {
+    content: url(/film.png);
+} */
+
+body {
+    background-image: url(/film.png);
+    background-size: 100px 100px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* div {
+    margin: 10px;
+} */
+/* table {
+    width: 100%;
+}
+td {
+    width: 30%;
+    height: 200px;
+    border: double black 10px;
+    background-color: lightgray;
+    position: relative;
+}
+
+img {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 0;
+    top: 0;
+}
+
+h2 {
+    display: inline-block;
+    border-bottom: double black 10px;
+
+}
+
+img:hover {
+    width: 100%;
+    height: 100%;
+} 
+
+input[type=submit] {
+    width: 100%;
+    background-color: lightseagreen;
+}
+
+h1 {
+    text-align: center;
+}
+
+.forma td {
+    background-color: lightgray;
+    border: none;
+} */

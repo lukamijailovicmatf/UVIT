@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="row">Deda Mrazov spisak</h1>
+
+        <div class="row">
+
+            <div id="good">
+                <h2>Dobra deca</h2>
+                <table class="table">
+                    <% for(let d of dela) { 
+                        if (d.dobro) { %>
+                            <tr>
+                                <td> 
+                                    <form method="get" action="kid"> 
+                                        <input type="text" value="<%= d.ime %>" name="ime" hidden>
+                                        <input type="submit" value="<%= d.ime %>">
+                                    </form>
+                                </td>
+                                <td> <%= d.poeni %> </td>
+                            </tr>
+                     <% } %>
+                 <% } %>
+                </table>
+            </div>
+
+            <div id="bad">
+                <h2>Losa deca</h2>
+                <table class="table">
+                    <% for(let d of dela) { 
+                        if (d.poeni < 0) { %>
+                            <tr>
+                                <td>
+                                    <form method="get" action="kid"> 
+                                        <input type="text" value="<%= d.ime %>" name="ime" hidden>
+                                        <input type="submit" value="<%= d.ime %>">
+                                    </form>
+                                </td>
+                                <td><%= d.poeni %></td>
+                            </tr>
+                     <% } %>
+                 <% } %>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>Novo delo</h2>
+            <form method="post" action="/unesi">
+                Dete:
+                <input type="text" name="dete">
+                Delo:
+                <input type="text" name="delo">
+                Poeni:
+                <input type="number" name="poeni">
+                
+                <input type="submit" value="unesi">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

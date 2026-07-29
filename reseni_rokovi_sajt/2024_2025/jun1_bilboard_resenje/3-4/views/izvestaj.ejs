@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./1.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <img src="/bilboard.png" alt="xx">
+        </div>
+
+        <div class="row">
+            <h1> <%= date %> </h1>
+        </div>
+
+        <% for(let el of izvestaj) { %>
+            <div>
+                <div> <%= el.Rank %> </div>
+                <div> <%= el.Song %> </div>
+                <div> <%= el.Artist %> </div>
+
+                <div>
+                    <form action="/updateRank" method="get">
+                        <input type="text" value="<%= el.Date %>" name="datum" hidden>
+                        <input type="text" value="<%= el.Rank %>" name="rank" hidden>
+                        <input type="text" value="true" name="inc" hidden>
+                        <input type="text" value="<%= el.id %>" name="id" hidden>
+                        <input type="submit" value="uvecaj" <%= el.Rank == 1 ? "disabled" : "" %>>
+                    </form>
+                </div>
+
+                <div >
+                    <form action="/updateRank" method="get">
+                        <input type="text" value="<%= el.Date %>" name="datum" hidden>
+                        <input type="text" value="<%= el.Rank %>" name="rank" hidden>
+                        <input type="text" value="false" name="inc" hidden>
+                        <input type="text" value="<%= el.id %>" name="id" hidden>
+                        <input type="submit" value="umanji" <%= el.Rank == 10 ? "disabled" : "" %>>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    
+</body>
+
+</html>

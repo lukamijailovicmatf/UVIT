@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <style>
+        div {
+            /* background-color: pink; */
+            /* border: solid black 1px; */
+            height: 50px;
+        }
+        td {
+            border-bottom: solid gray 1px;
+        }
+
+        td:nth-child(2) {
+            font-weight: bold;
+        }
+
+        table {
+            margin: 10px;
+            border: dotted black 2px;
+            width: 90%;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: pink;
+            background-image: linear-gradient(pink, white);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-12">Dnevnik čitanja</h1>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div>
+
+                    <% for(let knjiga of knjige) { %>
+                    <table>
+                        <tr>
+                            <td>Naslov</td>
+                            <td> <%= knjiga.title %> </td>
+                        </tr>
+                        <tr>
+                            <td>Pisac</td>
+                            <td> <%= knjiga.author %> </td>
+                        </tr>
+                        <tr>
+                            <td>Godina izdanja</td>
+                            <td> <%= knjiga.year %> </td>
+                        </tr>
+                        <tr>
+                            <td>Broj strana</td>
+                            <td> <%= knjiga.pages %> </td>
+                        </tr>
+                        <tr>
+                            <td>Procitano</td>
+                            <td> <%= knjiga.read ? "da" : "ne" %> </td>
+                        </tr>
+                        <tr>
+                            <td>Link</td>
+                            <td>
+                                <form method="get" action="/knjiga">
+                                    <input type="text" value="<%= knjiga._id %>" name="id" hidden>
+                                    <input type="submit" class="btn-success" value="informacije">
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                    <% } %>
+
+                </div>
+            </div>
+            <div class="offset-1"></div>
+            <div class="col-3">
+                <form method="post" action="/novaKnjiga">
+                    <h2>Unesi novu knjigu</h2>
+                    Naslov
+                    <input type="text" name="naslov" class="form-control"> 
+                    Pisac
+                    <input type="text" name="pisac" class="form-control"> 
+                    Godina izdanja
+                    <input type="number" name="godina" class="form-control"> 
+                    Broj strana
+                    <input type="number" name="br_strana" class="form-control">
+                    <input type="submit" value="Unesi knjigu" class="btn-primary btn-block">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

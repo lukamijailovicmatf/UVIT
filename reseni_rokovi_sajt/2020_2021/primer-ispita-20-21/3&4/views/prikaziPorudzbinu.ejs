@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trenutna porudzbina</title>
+    <link rel="stylesheet" type="text/css" href="/css/stil.css" />
+</head>
+
+<body>
+    <% if (typeof id_artikla === 'undefined') { %>
+        <main>
+            <h1>Identifikator proizvoda ne postoji. Vratite se na prethodnu stranicu.</h1>
+            <a href="/artikal">Prethodna stranica</a>
+        </main>
+    <% } else { %>
+        <header>
+            <h1>Trenutna porudzbina</h1>
+        </header>
+        <main>
+            <form method="POST" action="/porudzbina/narucivanje" id="formular">
+                <div class="form-group">
+                    <label for="id">Identifikator proizvoda:</label>
+                    <input type="text" name="id" id="id" value="<%= id_artikla %>" readonly class="field">
+                </div>
+                <div class="form-group">
+                    <label for="ime_prezime">Ime i prezime:</label>
+                    <input type="text" name="ime_prezime" id="ime_prezime" class="field">
+                </div>
+                <div class="form-group">
+                    <label for="broj_artikala">Broj artikala:</label>
+                    <input type="number" name="broj_artikala" id="broj_artikala" class="field">
+                </div>
+                <div class="form-group">
+                    <label for="datum_isporuke">Datum isporuke:</label>
+                    <input type="date" name="datum_isporuke" id="datum_isporuke" class="field">
+                </div>
+                <input type="submit" value="Naruci proizvod">
+            </form>
+        </main>
+    <% } %>
+    <script src="/js/prikaziPorudzbinu.js"></script>
+</body>
+
+</html>

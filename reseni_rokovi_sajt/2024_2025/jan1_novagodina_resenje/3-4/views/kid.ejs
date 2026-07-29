@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./1.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <h1> <%= delo.ime %> </h1>
+        </div>
+
+        <div class="row">
+
+            <div>
+                <img alt="xxx" src="<%= delo.dobro ? '/good.png' : '/bad.png' %>">
+            </div>
+
+            <div>
+                <h2>Delo</h2>
+                <p class="<%= delo.dobro ? 'green' : 'red' %>"> <%= delo.delo %> </p>
+            </div>
+
+            <div>
+                <% if (delo.dobro) { %>
+                    <% if (delo.pismo == null) { %>
+                        <h2> Pismo nije primljeno </h2>
+                            <textarea style="width: 100%; height: 150px;"> </textarea>
+                    <% } else if (delo.poslato) { %>
+                        <h2> Pismo </h2>
+                        <p> <%= delo.pismo %> </p>
+                    <% } else { %>
+                        <h2> Pismo </h2>
+                        <textarea style="width: 100%; height: 150px;"> <%= delo.pismo %> </textarea>
+                    <% } %>
+                <% } else { %>
+                    <h2 class="red"> Losa deca ne mogu da pisu Deda Mrazu! </h2>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
