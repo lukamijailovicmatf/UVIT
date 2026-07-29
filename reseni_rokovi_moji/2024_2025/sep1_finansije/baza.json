@@ -1,0 +1,102 @@
+[
+    {
+        "_id": "081ac850-b6ea-45fa-bc31-79bf26c0ea6d",
+        "firstName": "Mirko",
+        "lastName": "Miric",
+        "email": "user1@example.com",
+        "password": "pass1",
+        "status": "blocked",
+        "savings": 100,
+        "loan": 50
+    },
+    {
+        "_id": "4042e845-0009-492a-a99c-0341a4a2d28e",
+        "firstName": "Ana",
+        "lastName": "Ilic",
+        "email": "user2@example.com",
+        "password": "pass2",
+        "status": "active",
+        "savings": 200,
+        "loan": 100
+    },
+    {
+        "_id": "00ed815f-b615-4207-abb1-e18ba4f36054",
+        "firstName": "Branko",
+        "lastName": "Levic",
+        "email": "user3@example.com",
+        "password": "pass3",
+        "status": "blocked",
+        "savings": 300,
+        "loan": 150
+    },
+    {
+        "_id": "0fe577c0-f94b-4e2b-aa42-0fea2ff9184c",
+        "firstName": "Masa",
+        "lastName": "Masic",
+        "email": "user4@example.com",
+        "password": "pass4",
+        "status": "active",
+        "savings": 400,
+        "loan": 200
+    },
+    {
+        "_id": "e0bd8216-db2f-4d4a-809f-96ba2b569178",
+        "firstName": "Lena",
+        "lastName": "Arsic",
+        "email": "user5@example.com",
+        "password": "pass5",
+        "status": "blocked",
+        "savings": 500,
+        "loan": 250
+    },
+    {
+        "_id": "e01b5ad6-af48-403d-a407-69e8119ae47c",
+        "firstName": "Vuk",
+        "lastName": "Vukic",
+        "email": "user6@example.com",
+        "password": "pass6",
+        "status": "active",
+        "savings": 600,
+        "loan": 300
+    },
+    {
+        "_id": "8d854ed1-5fa1-413f-863a-172b130ba455",
+        "firstName": "Lea",
+        "lastName": "Mitic",
+        "email": "user7@example.com",
+        "password": "pass7",
+        "status": "blocked",
+        "savings": 700,
+        "loan": 350
+    },
+    {
+        "_id": "8b0e05ac-586e-436d-9922-3f870f65a89c",
+        "firstName": "Marko",
+        "lastName": "Maric",
+        "email": "user8@example.com",
+        "password": "pass8",
+        "status": "active",
+        "savings": 800,
+        "loan": 400
+    },
+    {
+        "_id": "44963c01-b462-4ea3-bef2-abc6c40ac115",
+        "firstName": "Ema",
+        "lastName": "Jovanovic",
+        "email": "user9@example.com",
+        "password": "pass9",
+        "status": "blocked",
+        "savings": 900,
+        "loan": 450
+    },
+    {
+        "_id": "1ab713dc-9365-48d5-829e-fdde08aaa2b4",
+        "firstName": "Nikola",
+        "lastName": "Pesic",
+        "email": "user10@example.com",
+        "password": "pass10",
+        "status": "active",
+        "savings": 1000,
+        "loan": 500
+    }
+]

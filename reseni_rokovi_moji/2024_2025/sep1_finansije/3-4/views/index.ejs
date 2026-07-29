@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finansije</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <nav class="navigacija">
+        <a href="#" class="nav-link-logovanje">Logovanje</a>
+        <a href="#" class="nav-link-finansije">Finansije</a>
+    </nav>
+
+    <div class="baner"></div>
+
+    <div class="forma-kontejner">
+
+        <h2 class="forma-naslov">Ulogujte se</h2>
+
+        <form method="post" action="/login">
+
+            <!-- Red 1: Ime i Prezime -->
+            <div class="forma-red">
+                <input type="text" name="firstName" class="polje-unosa" placeholder="Ime">
+                <input type="text" name="lastName" class="polje-unosa" placeholder="Prezime">
+            </div>
+
+            <!-- Red 2: Email i Sifra -->
+            <div class="forma-red">
+                <input type="email" name="email" class="polje-unosa" placeholder="Email">
+                <input type="password" name="password" class="polje-unosa" placeholder="Šifra">
+            </div>
+
+            <!-- Dugmad -->
+            <div class="forma-dugmad">
+                <button type="reset" class="dugme-ocisti">Očisti</button>
+                <button type="submit" class="dugme-finansije">Idi na finansije</button>
+            </div>
+
+        </form>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+[
+    {
+        "naziv": "Vrat od stakla",
+        "autor": "Biljana Srbljanović",
+        "datum": "13",
+        "dan": "Subota",
+        "vreme": "19:00h",
+        "rezija": "Jagoš Marković",
+        "glumci": [
+            "Jelisaveta Sablić",
+            "Vesna Trivalić",
+            "Anita Mančić",
+            "Jovana Belović",
+            "Dragan Mićanović",
+            "Irfan Mensur",
+            "Marko Janketić",
+            "Slobodan Tešić",
+            "Lazar Đukić ",
+            "Miloš Samolov",
+            "Ana Čarman"
+        ],
+        "parter": 1200,
+        "balkon": 600,
+        "scena": "Velika scena \"Ljuba Tadić\"",
+        "slika": "vratodstakla.jpg",
+        "slobodno": 30
+    },
+    {
+        "naziv": "Pučina",
+        "autor": "Branislav Nušić",
+        "datum": "14",
+        "dan": "Nedelja",
+        "vreme": "20:00h",
+        "rezija": "Egon Savin",
+        "glumci": [
+            "Nenad Jezdić",
+            "Sloboda Mićalović",
+            "Ljubomir Bandović",
+            "Vesna Stanković",
+            "Janko Cekić",
+            "Cvijeta Mesić",
+            "Jovana Bеlović",
+            "Bojan Dimitrijević"
+        ],
+        "parter": 1500,
+        "balkon": 500,
+        "scena": "Velika scena \"Ljuba Tadić\"",
+        "slika": "pucina.jpg",
+        "slobodno": 100
+    },
+    {
+        "naziv": "Ujka Vanja",
+        "autor": "Anton Pavlovič Čehov",
+        "datum": "15",
+        "dan": "Ponedeljak",
+        "vreme": "19:00h",
+        "rezija": "Egon Savin",
+        "glumci": [
+            "Bogdan Diklić",
+            "Marija Vicković",
+            "Milica Gojković",
+            "Branislav Lečić",
+            "Nenad Jezdić",
+            "Dubravko Jovanović",
+            "Aleksandra Nikolić"
+        ],
+        "parter": 1000,
+        "balkon": 500,
+        "scena": "Velika scena \"Ljuba Tadić\"",
+        "slika": "ujkavanja.jpg",
+        "slobodno": 80
+    },
+    {
+        "naziv": "Edip",
+        "autor": "Sofokle",
+        "datum": "16",
+        "dan": "Utorak",
+        "vreme": "20:00h",
+        "rezija": "Vito Taufer",
+        "glumci": [
+            "Milan Marić",
+            "Nataša Ninković",
+            "Srđan Timarov",
+            "Bojan Dimitrijević",
+            "Aleksandar Đurica",
+            "Miloš Samolov",
+            "Nebojša Ljubišić",
+            "Zoran Cvijanović"
+        ],
+        "parter": 2000,
+        "balkon": 600,
+        "scena": "Velika scena \"Ljuba Tadić\"",
+        "slika": "edip.jpg",
+        "slobodno": 20
+    }
+]

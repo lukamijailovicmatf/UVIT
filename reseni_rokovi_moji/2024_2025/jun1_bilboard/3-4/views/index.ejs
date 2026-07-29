@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocetna</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+
+    <div class="glavni-kontejner">
+        <div class="header">
+            <img src="bilboard.png" alt="Billboard Logo" class="logo">
+        </div>
+    </div>
+    
+    <h1> Izaberite nedelju: </h1>
+
+    <form method="get" action="/prikaziIzvestaj">
+
+        <select name="datum">
+            <% for (let datum of datumi) { %>
+                <option value="<%= datum %>"> <%= datum %> </option>
+            <% } %>
+        </select>
+
+        <button type="submit"> Prikazi </button>
+
+    </form>
+
+</body>
+</html>

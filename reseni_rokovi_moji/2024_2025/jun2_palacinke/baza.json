@@ -1,0 +1,116 @@
+[
+    {
+        "prilog": "Eurokrem",
+        "slatko": true,
+        "vegan": false,
+        "popularnost": 250
+    },
+    {
+        "prilog": "Nutella",
+        "slatko": true,
+        "vegan": false,
+        "popularnost": 300
+    },
+    {
+        "prilog": "Plazma",
+        "slatko": true,
+        "vegan": false,
+        "popularnost": 180
+    },
+    {
+        "prilog": "Džem od kajsija",
+        "slatko": true,
+        "vegan": true,
+        "popularnost": 220
+    },
+    {
+        "prilog": "Džem od šljiva",
+        "slatko": true,
+        "vegan": true,
+        "popularnost": 210
+    },
+    {
+        "prilog": "Višnja",
+        "slatko": true,
+        "vegan": true,
+        "popularnost": 190
+    },
+    {
+        "prilog": "Banana",
+        "slatko": true,
+        "vegan": true,
+        "popularnost": 270
+    },
+    {
+        "prilog": "Pečenica",
+        "slatko": false,
+        "vegan": false,
+        "popularnost": 160
+    },
+    {
+        "prilog": "Sir",
+        "slatko": false,
+        "vegan": false,
+        "popularnost": 200
+    },
+    {
+        "prilog": "Pavlaka",
+        "slatko": false,
+        "vegan": false,
+        "popularnost": 150
+    },
+    {
+        "prilog": "Pečurke",
+        "slatko": false,
+        "vegan": true,
+        "popularnost": 130
+    },
+    {
+        "prilog": "Kečap",
+        "slatko": false,
+        "vegan": true,
+        "popularnost": 140
+    },
+    {
+        "prilog": "Orasi",
+        "slatko": true,
+        "vegan": true,
+        "popularnost": 90
+    },
+    {
+        "prilog": "Med",
+        "slatko": true,
+        "vegan": false,
+        "popularnost": 110
+    },
+    {
+        "prilog": "Breskva kompot",
+        "slatko": true,
+        "vegan": true,
+        "popularnost": 95
+    },
+    {
+        "prilog": "Šećer",
+        "slatko": true,
+        "vegan": true,
+        "popularnost": 300
+    },
+    {
+        "prilog": "Origano",
+        "slatko": false,
+        "vegan": true,
+        "popularnost": 70
+    },
+    {
+        "prilog": "Paradajz",
+        "slatko": false,
+        "vegan": true,
+        "popularnost": 125
+    },
+    {
+        "prilog": "Čili",
+        "slatko": false,
+        "vegan": true,
+        "popularnost": 80
+    }
+]

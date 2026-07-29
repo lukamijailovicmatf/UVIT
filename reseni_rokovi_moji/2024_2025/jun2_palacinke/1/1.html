@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palačinke</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+
+    <!-- ZAGLAVLJE SA NASLOVNOM SLIKOM -->
+    <header class="zaglavlje">
+        <img src="header.jpg" alt="Palacinke" class="zaglavlje-slika">
+        <h1 class="zaglavlje-naslov">Palačinke</h1>
+    </header>
+
+    <!-- GLAVNI SADRZAJ (DVE KOLONE) -->
+    <main class="glavni-sadrzaj">
+
+        <!-- Leva kolona: kontakt informacije -->
+        <aside class="boks-kontakt">
+            <div class="kontakt-sekcija">
+                <h1>Kontakt:</h1>
+                <p>063 7121314</p>
+            </div>
+            <div class="kontakt-sekcija">
+                <h1>Lokacija:</h1>
+                <p>Karadjordjeva 12c, Zemun</p>
+            </div>
+        </aside>
+
+        <!-- Desna kolona: forma za izbor priloga -->
+        <section class="sekcija-narudzbina">
+            <h1 class="naslov-narudzbine">Izaberi priloge</h1>
+
+            <!-- Tabela sa listom dostupnih priloga -->
+            <table class="tabela-prilozi">
+                <tbody>
+
+                    <!-- SLATKI PRILOZI -->
+
+                    <tr>
+                        <td class="naziv-priloga">Eurokrem</td>
+                        <td class="tip-priloga">slatko</td>
+                        <td class="oznaka-vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Nutella</td>
+                        <td class="tip-priloga">slatko</td>
+                        <td class="oznaka-vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Plazma</td>
+                        <td class="tip-priloga">slatko</td>
+                        <td class="oznaka-vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Džem od kajsije</td>
+                        <td class="tip-priloga">slatko</td>
+                        <!-- Vegan oznaka se prikazuje samo kod veganskih sastojaka -->
+                        <td class="oznaka-vegan"><img src="vegan.png" alt="vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Džem od šljiva</td>
+                        <td class="tip-priloga">slatko</td>
+                        <td class="oznaka-vegan"><img src="vegan.png" alt="vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Višnja</td>
+                        <td class="tip-priloga">slatko</td>
+                        <td class="oznaka-vegan"><img src="vegan.png" alt="vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Banana</td>
+                        <td class="tip-priloga">slatko</td>
+                        <td class="oznaka-vegan"><img src="vegan.png" alt="vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+
+                    <!-- SLANI PRILOZI -->
+
+                    <tr>
+                        <td class="naziv-priloga">Pečenica</td>
+                        <td class="tip-priloga">slano</td>
+                        <td class="oznaka-vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Sir</td>
+                        <td class="tip-priloga">slano</td>
+                        <td class="oznaka-vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Pavlaka</td>
+                        <td class="tip-priloga">slano</td>
+                        <td class="oznaka-vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Pečurke</td>
+                        <td class="tip-priloga">slano</td>
+                        <td class="oznaka-vegan"><img src="vegan.png" alt="vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="naziv-priloga">Kečap</td>
+                        <td class="tip-priloga">slano</td>
+                        <td class="oznaka-vegan"><img src="vegan.png" alt="vegan"></td>
+                        <td class="izbor-priloga"><input type="checkbox"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- Dugme za slanje narudzbine -->
+            <button class="dugme-naruci">Poruči</button>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

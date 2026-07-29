@@ -1,0 +1,80 @@
+.div-ugao {
+    width: 200px;
+    height: 200px;
+    margin-top: 0;
+    margin-left: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    background-color: white;
+}
+
+.div-ugao-2 {
+    width: 200px;
+    height: 100px;
+    margin-top: 32px;
+    background-image: url('ichigo.jpg');
+    background-size: contain;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
+}
+
+ul {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    margin-left: 25px;
+
+}
+
+.omotac {
+    border: 2px solid black;
+    width: 45%;
+    height: 820px;
+    margin: auto;
+    margin-top: 90px;
+    background: linear-gradient(to top left, blue, rgb(148, 38, 38));
+}
+
+h2 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+.div-forma {
+    padding-left: 280px;
+}
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+select {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+
+label {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+input {
+    width: 50px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 60px;
+    height: 30px;
+}

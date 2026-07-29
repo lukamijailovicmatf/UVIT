@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="predstava.css">
+</head>
+
+<body>
+    
+    <div>
+
+        <div class="poster-veliki">
+            <img src="<%= predstava.nazivSlike %>" alt="<%= predstava.naziv %>">
+        </div>
+
+        <div class="informacije-predstave">
+            <div class="pisac"> <%= predstava.autor %> </div>
+        </div>
+
+        <h2 class="naslov"> <%= predstava.naziv %> </h2>
+
+        <div class="vreme-detalji">
+            <%= predstava.dan %>, <%= predstava.datum %> Septembar, <%= predstava.vreme %>
+        </div>
+
+        <div class="glumci-blok">
+            <span> Igraju: </span> <br>
+            <%= predstava.glumci.join(', ') %>
+        </div>
+
+        <div class="ulaznice-sekcija">
+            <div> Ulaznice: </div>
+            <form method="post" action="/kupi">
+                <input type="hidden" name="id" value="<%= predstava._id %>">
+                <input type="radio" name="lokacija" value="parter"> Parter, cena <%= predstava.cenaParter %> <br>
+                <input type="radio" name="lokacija" value="balkon"> Balkon, cena <%= predstava.cenaBalkon %> <br> <br>
+                Broj ulaznica: <input type="number" name="broj" min="1" value="1"> <br> <br>
+                <button type="submit" class="dugme-kupi"> Kupi </button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

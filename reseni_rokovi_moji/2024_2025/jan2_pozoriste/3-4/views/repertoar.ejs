@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Repertoar za septembar</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <!-- kutija koja sadrzi podatke o predstavama -->
+    <div class="glavni-kontejner">
+
+        <h1>Repertoar za septembar</h1>
+        <hr>
+
+        <!-- kutija koja sadrzi podatke o svim predstavama iz baze -->
+        <% for (let predstava of predstave) { %>
+            <div class="predstava">
+
+                <div class="datum-blok">
+                    <div class="dan"> <%= predstava.dan %> </div>
+                    <div class="datum-broj-mesec">
+                        <div class="broj"> <%= predstava.datum %> </div>
+                        <div class="mesec"> Septembar </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <img src="<%= predstava.nazivSlike %>" alt="<%= predstava.naziv %>">
+                </div>
+
+                <div class="detalji">   
+                    <div class="pisac"> <%= predstava.autor %> </div>
+                    <div class="naslov"> <%= predstava.naziv %> </div>
+                    <div class="scena"> <%= predstava.scena %> </div>
+                    <div class="vreme"> <%= predstava.vreme %> </div>
+                    <form method="get" action="/predstava">
+                        <input type="hidden" name="id" value="<%= predstava._id %>">
+                        <button type="submit" class="dugme-ulaznice"> Ulaznice </button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+
+
+</body>
+</html>

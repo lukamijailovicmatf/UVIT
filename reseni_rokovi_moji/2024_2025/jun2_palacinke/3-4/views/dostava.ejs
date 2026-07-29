@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dostava</title>
+    <link rel="stylesheet" href="dostava.css">
+</head>
+<body>
+    
+    <h2> Izabrani prilozi </h2>
+
+    <ul>
+        <% if (izabrani.length > 0) { %>
+            <% for (let prilog of izabrani) { %>
+                <li> <%= prilog %> </li>
+            <% } %>
+        <% } else { %>
+            <p> Nisu izabrani prilozi! </p>
+        <% } %>
+    </ul>
+
+    <h1> Informacije za dostavu </h1>
+
+    <form method="get" action="/">
+
+        Adresa: <br>
+        <input type="text" name="adresa" class="polje-adresa">
+
+        Broj telefona: <br>
+        <input type="number" name="broj" class="polje-broj">
+
+        <button type="submit" class="dugme-potvrdi"> Potvrdi </button>
+
+    </form>
+
+</body>
+</html>

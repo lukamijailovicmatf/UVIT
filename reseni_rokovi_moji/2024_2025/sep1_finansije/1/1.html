@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finansije</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+
+    <!-- ============================
+         NAVIGACIONA TRAKA
+         Tamna pozadina, dva linka:
+         "Logovanje" (zeleno) i "Finansije" (belo)
+         ============================ -->
+    <nav class="navigacija">
+        <a href="#" class="nav-link-logovanje">Logovanje</a>
+        <a href="#" class="nav-link-finansije">Finansije</a>
+    </nav>
+
+    <!-- ============================
+         HERO BANER SA SLIKOM
+         Slika se postavlja kao pozadina i ponavlja po x-osi
+         ============================ -->
+    <div class="baner"></div>
+
+    <!-- ============================
+         FORMA ZA LOGOVANJE
+         Naslov + 4 polja u 2 reda + 2 dugmeta
+         ============================ -->
+    <div class="forma-kontejner">
+        <h2 class="forma-naslov">Ulogujte se</h2>
+
+        <form>
+            <!-- Red 1: Ime i Prezime -->
+            <div class="forma-red">
+                <input type="text" class="polje-unosa" placeholder="Ime">
+                <input type="text" class="polje-unosa" placeholder="Prezime">
+            </div>
+
+            <!-- Red 2: Email i Sifra -->
+            <div class="forma-red">
+                <input type="email" class="polje-unosa" placeholder="Email">
+                <input type="password" class="polje-unosa" placeholder="Šifra">
+            </div>
+
+            <!-- Dugmad -->
+            <div class="forma-dugmad">
+                <button type="reset" class="dugme-ocisti">Očisti</button>
+                <button type="submit" class="dugme-finansije">Idi na finansije</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

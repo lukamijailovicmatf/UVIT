@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    color: #333;
+}
+
+.glavni-kontejner {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border-top: 1px solid #ddd;
+    margin-bottom: 50px;
+}
+
+.predstava {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* sekcija sa datumom */
+.datum-blok {
+    display: flex;
+    align-items: center;   /* poravnava dan vertikalno sa centrom broja/meseca */
+    width: 180px;
+    margin-right: 20px;
+}
+
+.dan {
+    flex: 1;   /* gura broj i mesec udesno */
+    text-align: left;
+    font-size: 16px;
+}
+
+.datum-broj-mesec {
+    display: flex;
+    flex-direction: column; /* OVO JE KLJUČNO: slaze elemente jedan ISPOD drugog */
+    align-items: center;    /* centrira mesec u odnosu na broj */
+    width: 80px;
+}
+
+.broj {
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    line-height: 2;
+}
+
+.mesec {
+    font-size: 10px;
+    color: #999;
+}
+
+/* sekcija sa slikom */
+.poster img {
+    width: 120px;
+    /*height: auto;*/
+    /*display: block;*/
+    /*box-shadow: 2px 2px 10px rgba(0,0,0,0.1);*/
+}
+
+/* sekcija sa informacijama */
+.detalji {
+    padding-left: 60px;
+}
+
+.pisac {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.naslov {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.scena {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.vreme {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+}

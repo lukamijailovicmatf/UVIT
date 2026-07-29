@@ -1,0 +1,117 @@
+* {
+    margin: 0;      /* bez ovoga bi navigaciona traka bila malo "odlepljenja" od ivica pregledaca */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+  
+.navigacija {
+    background-color: #2b2d2f;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  /* linkovi ravnomerno rasporedeni po sirini trake */
+    padding: 10px;
+}
+
+.nav-link-logovanje {
+    color: #4caf50;
+    text-decoration: none;      /* uklanja liniju koja podvlaci link */
+    font-size: 15px;
+}
+
+/* kada kursor stane na link menja mu se boja u datu */
+.nav-link-logovanje:hover {
+    color: #81c784;
+}
+
+.nav-link-finansije {
+    color: #ffffff;
+    text-decoration: none;      /* uklanja liniju koja podvlaci link */
+    font-size: 15px;
+}
+
+.nav-link-finansije:hover {
+    color: #cccccc;
+}
+
+.baner {
+    width: 100%;
+    height: 200px;
+    background-image: url('loan.jpg');     /* slika kao pozadina */
+    background-repeat: repeat-x;           /* ponavljanje samo po x-osi */
+    background-size: auto 200px;           /* visina = visina banera, sirina proporcionalna originalnoj slici */
+    background-position: top left;
+}
+
+.forma-kontejner {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.forma-naslov {
+    font-size: 35px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+}
+
+.forma-red {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.polje-unosa {
+    flex: 1;                   /* svako polje zauzima jednako mesta u redu */
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.polje-unosa:focus {
+    border-color: #4caf50;
+    outline: none;              /* sklanja crni okvir kada se selektuje polje */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);   /* stavlja zelenkastu seknu oko polja kada se selektuje */
+}
+
+.forma-dugmad {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dugme-ocisti {
+    padding: 6px 18px;
+    background-color: #6c757d;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.dugme-ocisti:hover {
+    background-color: #5a6268;
+}
+
+.dugme-finansije {
+    padding: 6px 18px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.dugme-finansije:hover {
+    background-color: #218838;
+}

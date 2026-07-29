@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billboard HOT 100</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+
+    <div class="glavni-kontejner">
+        
+        <div class="header">
+            <img src="bilboard.png" alt="Billboard Logo" class="logo">
+            <h1 class="datum">2025-01-08</h1>
+        </div>
+
+        <div class="tabela">
+            
+            <% for (let pesma of izvestaj) { %>
+
+                <div class="red">
+                    <div class="rank"> <%= pesma.Rank %> </div>
+                    <div class="info">
+                        <div class="naziv"> <%= pesma.Song %> </div>
+                        <div class="izvodjac"> <%= pesma.Artist %> </div>
+                    </div>
+
+                    <div class="akcije">
+                        <form method="post" action="/promeniRang">
+                            <input type="hidden" name="id" value="<%= pesma._id %>">
+                            <input type="hidden" name="datum" value="<%= pesma.Date %>">
+                            <input type="hidden" name="rank" value="<%= pesma.Rank %>">
+                            <input type="hidden" name="inc" value="1">
+                            <button class="btn btn-uvecaj">uvećaj</button>
+                        </form>
+
+                        <form method="post" action="/promeniRang">
+                            <input type="hidden" name="id" value="<%= pesma._id %>">
+                            <input type="hidden" name="datum" value="<%= pesma.Date %>">
+                            <input type="hidden" name="rank" value="<%= pesma.Rank %>">
+                            <input type="hidden" name="inc" value="1">
+                            <button class="btn btn-umanji">umanji</button>
+                        </form>
+        
+                    </div>
+                </div>
+                
+            <% } %>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palačinke</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <header class="zaglavlje">
+        <img src="header.jpg" alt="Palacinke" class="zaglavlje-slika">
+        <h1 class="zaglavlje-naslov">Palačinke</h1>
+    </header>
+
+    <main class="glavni-sadrzaj">
+
+        <aside class="boks-kontakt">
+
+            <div class="kontakt-sekcija">
+                <h1>Kontakt:</h1>
+                <p>063 7121314</p>
+            </div>
+
+            <div class="kontakt-sekcija">
+                <h1>Lokacija:</h1>
+                <p>Karadjordjeva 12c, Zemun</p>
+            </div>
+
+        </aside>
+
+        <section class="sekcija-narudzbina">
+
+            <h1 class="naslov-narudzbine">Izaberi priloge</h1>
+
+            <form method="get" action="/filter">
+                <input type="radio" name="tip" value="slatko"> Slatko
+                <input type="radio" name="tip" value="slano"> Slano
+                <input type="radio" name="tip" value="vegan"> Vegan
+                <button type="submit"> Filter </button>
+            </form>
+
+            <form method="post" action="/dostava">
+                <table class="tabela-prilozi">
+
+                    <tbody>
+
+                        <% for (let prilog of prilozi) { %>
+                            <tr>
+                                <td class="naziv-priloga"> <%= prilog.prilog %> </td>
+                                <td class="tip-priloga"> <%= prilog.slatko ? 'slatko' : 'slano' %> </td>
+                                <td class="oznaka-vegan">
+                                    <% if (prilog.vegan) { %>
+                                        <img src="vegan.png" alt="vegan">
+                                    <% } %>
+                                </td>
+                                <td class="izbor-priloga">
+                                    <input type="checkbox" name="izabrani" value="<%= prilog.prilog %>">
+                                </td>
+                            </tr>
+                        <% } %>
+
+                    </tbody>
+
+                </table>
+
+                <button class="dugme-naruci">Poruči</button>
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

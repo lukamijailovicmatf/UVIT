@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deda Mrazov spisak</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <h1>Deda Mrazov spisak</h1>
+
+    <!-- div za kutiju gde su Dobra deca i kutiju gde su Losa deca -->
+    <div class="kutije">
+
+        <div id="dobri">
+            <h2 class="naslov-kutije">Dobra deca</h2>
+            <div class="stavka"><span>Alisa</span><span>8</span></div>
+            <div class="stavka"><span>Aurora</span><span>7</span></div>
+            <div class="stavka"><span>Bambi</span><span>6</span></div>
+            <div class="stavka"><span>Snezana</span><span>15</span></div>
+        </div>
+        
+        <div id="losi">
+            <h2 class="naslov-kutije">Losa deca</h2>
+            <div class="stavka"><span>Gaston</span><span>-7</span></div>
+            <div class="stavka"><span>Hans</span><span>-7</span></div>
+            <div class="stavka"><span>Kapetan Kuka</span><span>-7</span></div>
+            <div class="stavka"><span>Kruela de Vil</span><span>-20</span></div>
+            <div class="stavka"><span>Skar</span><span>-20</span></div>
+            <div class="stavka"><span>Ursula</span><span>-17</span></div>
+        </div>
+    </div>
+
+    <!-- div za formular -->
+    <div id="formular">
+        <h2 id="naslov-formulara">Novo delo</h2>
+        <form>
+            <div class="polje-grupa">
+                <label>Dete:</label>
+                <select class="kontrola">
+                    <option>Alisa</option>
+                </select>
+            </div>
+            <div class="polje-potvrda">
+                <input type="checkbox" id="dobro-delo">
+                <label for="dobro-delo">Dobro delo</label>
+            </div>
+            <div class="polje-grupa">
+                <label>Sta je uradio:</label>
+                <input type="text" class="kontrola">
+            </div>
+            <div class="polje-grupa">
+                <label>Poeni:</label>
+                <input type="number" class="kontrola">
+            </div>
+            <button class="dugme-unesi">unesi</button>
+        </form>
+    </div>
+    
+</body>
+</html>

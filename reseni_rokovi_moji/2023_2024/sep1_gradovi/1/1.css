@@ -1,0 +1,76 @@
+.div-heder {
+    width: 100%;
+    height: 250px;
+    background-image: url('1.jpg');
+    background-repeat: repeat-x;
+    background-size: 700px 250px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.naslov-heder {
+    color: white;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 15px;
+}
+
+.glavni-div {
+    height: 395px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.levi-div {
+    width: 30%;
+}
+
+.srednji-div {
+    margin-right: 20px;
+    width: 40%;
+}
+
+.desni-div {
+    width: 30%;
+}
+
+button {
+    width: 90%;
+    margin-bottom: 10px;
+    height: 40px;
+    text-align: left;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(52, 171, 218);
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.naslov-srednji-div {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;   
+}
+
+.desni-div {
+    text-align: center;
+    color: white;
+    background-image: url('2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dugme {
+    width: 100%;
+    height: 70px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 15px;
+}

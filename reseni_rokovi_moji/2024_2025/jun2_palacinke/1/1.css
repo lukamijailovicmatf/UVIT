@@ -1,0 +1,195 @@
+/* ============================================
+   OPSTE POSTAVKE
+   Resetovanje podrazumevanih margina i padding-a
+   ============================================ */
+* {
+    box-sizing: border-box;
+    margin: 2px;
+    /*padding: 0;*/
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    /*background-color: #f9f6f2;*/
+    /*color: #333;*/
+}
+
+
+/* ============================================
+   ZAGLAVLJE SA NASLOVNOM SLIKOM
+   Slika pokriva celu sirinu, naslov je
+   pozicioniran u sredini preko slike
+   ============================================ */
+.zaglavlje {
+    position: relative;   /* potrebno da bi naslov mogao biti apsolutno pozicioniran unutar zaglavlja */
+    width: 100%;
+    height: 230px;
+    overflow: hidden;     /* sakriva delove slike koji prekoracuju visinu zaglavlja */
+}
+
+/* Naslovna slika koja popunjava celo zaglavlje */
+.zaglavlje-slika {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* slika pokriva povrsinu bez deformacije */
+    object-position: center;    /* centrira kadar slike */
+    /*display: block;*/
+}
+
+/* Naslov "Palacinke" pozicioniran preko slike */
+.zaglavlje-naslov {
+    position: absolute;         /* pozicionira se u odnosu na .zaglavlje */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* tacno centriranje po oba smera */
+    font-size: 130px;
+    font-weight: bold;
+    color: white;
+    /* text-shadow: 1px 2px 6px black;  /* senka za citljivost na slici */
+    /*white-space: nowrap;*/
+    letter-spacing: 4px;
+}
+
+
+/* ============================================
+   GLAVNI SADRZAJ - DVE KOLONE
+   Flexbox raspored: boks za kontakt (levo)
+   i sekcija za narudzbinu (desno)
+   ============================================ */
+.glavni-sadrzaj {
+    display: flex;      /* da nema ovoga sekcija za narudbine bi otisla u sledeci red, a ne u nastavak kao sto treba */
+    align-items:flex-start;
+}
+
+
+/* ============================================
+   LEVA KOLONA: BOKS SA KONTAKT PODACIMA
+   Tirkizna pozadina, beli tekst
+   ============================================ */
+.boks-kontakt {
+    background-color: #5fa8a0;
+    color: #ffffff;
+    width: 310px;
+    height: 300px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;     /* da nema ovog svojstva Kontak i Lokacija bi isli jedan pored drugog umesto jedan ispod drugog */
+    justify-content:center;
+    gap: 35px;                  /* razmak izmedju sekcija Kontakt i Lokacija */
+    text-align: center;         /* da nema ovoga tekst bi bio poravnat uz desnu ivicu elementa */
+    border-radius: 30px;
+}
+
+/* Naslovi unutar kontakt boksa (Kontakt: i Lokacija:) */
+.kontakt-sekcija h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Tekst sa brojem telefona i adresom */
+.kontakt-sekcija p {
+    font-size: 15px;
+}
+
+
+/* ============================================
+   DESNA KOLONA: SEKCIJA ZA NARUDZBINU
+   Sadrzi naslov, tabelu s prilozima i dugme
+   ============================================ */
+.sekcija-narudzbina {
+    /*border: 1px solid black;*/
+    flex: 0.8;    /* zauzima preostali prostor pored kontakt boksa, koliko mi odredimo */
+    padding: 15px 35px;
+}
+
+/* Naslov "Izaberi priloge" */
+.naslov-narudzbine {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+
+/* ============================================
+   TABELA PRILOGA
+   Svaki red = jedan prilog sa 4 kolone:
+   naziv | tip (slatko/slano) | vegan oznaka | checkbox
+   ============================================ */
+.tabela-prilozi {
+    width: 100%;
+    border-collapse: collapse;   /* uklanja razmak izmedju celija */
+}
+
+/* Opste postavke za sve celije u tabeli */
+.tabela-prilozi td {
+    /*border: 1px solid black;*/
+    padding: 10px 11px;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+/* Kolona sa nazivom priloga */
+.naziv-priloga {
+    width: 50%;
+    color: #222;
+}
+
+/* Kolona sa tipom: "slatko" ili "slano" */
+.tip-priloga {
+    width: 25%;
+    color: #222;
+}
+
+/* Kolona sa vegan ikonom (prazna ako prilog nije vegan) */
+.oznaka-vegan {
+    width: 12%;
+    text-align: center;
+}
+
+/* Dimenzije vegan ikonice */
+.oznaka-vegan img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+/* Kolona sa checkbox-om za odabir priloga */
+.izbor-priloga {
+    width: 8%;
+    text-align: center;
+}
+
+/* Stilizovanje samog checkbox-a */
+.izbor-priloga input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #3a85d8;   /* boja oznake kada je cekiran */
+}
+
+
+/* ============================================
+   DUGME "PORUCI"
+   Proteze se celom sirinom desne kolone
+   ============================================ */
+.dugme-naruci {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', serif;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;   /* blagi prelaz boje pri hoveru */
+}
+
+/* Promena boje dugmeta kada se mis nadje iznad njega */
+.dugme-naruci:hover {
+    background-color: #f0f0f0;
+}

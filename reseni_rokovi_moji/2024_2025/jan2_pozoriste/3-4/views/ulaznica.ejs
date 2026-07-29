@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulaznica</title>
+    <link rel="stylesheet" href="ulaznica.css">
+</head>
+<body>
+    
+    <div class="glavni-kontejner">
+        <div class="ulaznica-box">
+
+            <h2> <%= predstava.naziv %> </h2>
+
+            <p> Rezija <%= predstava.rezija %> </p>
+
+            <p> <%= predstava.dan %>, <%= predstava.datum %> Septembar, <%= predstava.vreme %> </p>
+
+            <p> <%= predstava.scena %> </p>
+
+            <p> Ukupno za placanje <%= cenaUkupno %> </p>
+
+        </div>
+
+        <form method="get" action="/repertoar">
+            <button type="submit"> Nazad na pocetnu </button>
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    display: flex;
+    justify-content: center;       /* ide u paru sa display: flex; inace bez njega nema uticaj */
+}
+
+.glavni-kontejner {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.header { 
+    margin-bottom: 30px; 
+}
+
+.logo { 
+    max-width: 450px; 
+    height: auto; 
+}
+
+.datum { 
+    font-size: 28px; 
+    margin-top: 10px; 
+    font-weight: bold; 
+}
+
+.red {
+    display: flex;          /* osigurava da svi elementi reda budu u jednom redu tj. da se ne prelamaju */
+    align-items: center;    /* dugmice centrira da budu u ravni polja */
+    margin-bottom: 5px;
+    overflow: hidden;       /* osigurava da ništa ne "iscuri" van plavog okvira */
+}
+
+.rank {
+    background-color: #007bff;
+    color: white;
+    width: 170px; /* Smanjio sam malo da bi bilo više mesta za tekst */
+    height: 47px;
+    display: flex;
+    align-items: center;        /* pomera brojeve od gornje ivice */
+    justify-content: center;    /* pomera brojeve od leve ivice */
+    font-size: 20px;
+}
+
+.info {
+    border: 1px solid #007bff;
+    display: flex;
+    flex: 1; /* zauzima veći deo prostora */
+    height: 45px;
+    align-items: center;
+}
+
+.naziv {
+    flex: 1;
+    padding: 5px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.izvodjac {
+    flex: 1;
+    padding: 5px;
+    border-left: 1px solid #007bff; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+/* posebno polje za dugmiće unutar reda */
+.akcije {
+    justify-content: left;
+    height: 40px;
+    margin-left: 5px;
+}
+
+.btn {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;   /* ovo daje 'ruku' na kursoru */
+    font-size: 15px;
+}
+
+/* efekat klika da znaš da radi */
+.btn:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+.btn-uvecaj { 
+    background-color: #28a745; 
+}
+
+.btn-umanji { 
+    background-color: #dc3545; 
+}

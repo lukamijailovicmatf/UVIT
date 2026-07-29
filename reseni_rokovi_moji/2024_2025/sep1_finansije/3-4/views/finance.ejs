@@ -1,0 +1,65 @@
+    <!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finansije</title>
+    <link rel="stylesheet" href="finance.css">
+</head>
+<body>
+
+    <nav class="navigacija">
+        <a href="#" class="nav-link-logovanje">Logovanje</a>
+        <a href="#" class="nav-link-finansije">Finansije</a>
+    </nav>
+
+    <div class="baner"></div>
+
+    <h2 class="naslov-logovanje"> Dobrodosao, <%= korisnik.firstName %> <%= korisnik.lastName %>! </h2>
+
+    <form method="post" action="/azuriraj">
+
+        <input type="hidden" name="email" value="<%= korisnik.email %>">
+
+        <div class="radio-dugmad">
+            <input type="radio" name="tip" value="stednja"> Stednja
+            <input type="radio" name="tip" value="pozajmica"> Pozajmica
+        </div>
+
+        <div class="iznos-potvrdi-polja">
+            <input type="number" name="iznos" class="polje-iznos" placeholder="Iznos">
+            <button type="submit" class="dugme-potvrdi"> Potvrdi </button>
+        </div>
+
+    </form>
+
+    <h2 class="naslov-tabela"> Korisnici (aktivni) </h2>
+
+    <table class="tabela-korisnici">
+
+        <thead>
+            <tr>
+                <th> Ime i prezime </th>
+                <th> Stednja </th>
+                <th> Pozajmica </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% for (let aktivan of aktivni) { %>
+                <tr>
+                    <td> <%= aktivan.firstName %> <%= aktivan.lastName %> </td>
+                    <td> <%= aktivan.savings %> </td>
+                    <td> <%= aktivan.loan %> </td>
+                </tr>
+            <% } %>
+        </tbody>
+
+    </table>
+
+    <form method="get" action="/" class="forma-nazad">
+        <button type="submit" class="dugme-nazad"> Nazad na logovanje </button>
+    </form>
+
+</body>
+</html>
