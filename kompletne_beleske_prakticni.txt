@@ -1,0 +1,647 @@
+
+
+-Blokovski elemnti se redjaju jedni ispod drugih i na njih deluju width i height (npr. p, div...)
+-Linijski elementi se redjaju jedni pored drugih i na njih ne uticu width i height(npr. span)
+-Linijkso blokovski elemnti se redjaju jedni pored drugih ali na njih deluju width i height (npr. slika)
+-Koordinate stranice uvek u gornjem levom cosku i fiksirano na vrhu stranice (nije uvek vidljiv)
+-Koordinate pregledaca uvek u gornjem levom cosku i pomera se sa skrolovanje (uvek je vidljiv)
+-Y osa raste ka dole
+
+HTML
+    <!DOCTYPE html> UVEK na pocetku!!!!!
+    Onda <html>, pa <head> i <body>
+
+    *HEAD*:
+        1) <title></title>
+            -naslov koji stojin na kartici
+        2) <meta>
+            -charset="UTF-8"(meta)
+        3) <style></style>
+            -za css ako hocemo css u html kodu direktno
+            -ima prednost u odnosu na css file
+        4) <link>
+            -ako hocemo poseban fajl sa css tu ga navodimo
+                a)rel="" (stylesheet - ako je u pitanju css)
+                b)type="" (text/css - ako je u pitanju css)
+                c) href="" (apsolutna ili relativna putanja do css)
+
+    *BODY*:
+        *OSNOVNI POJMOVI*:
+            1) <p></p>
+                -paragraf, blokovski elemente
+            2) <span></span>
+                -paragraf, linijski element
+            3) <nav></nav>
+                -grupisanje nekih elemenata koji sluze za navigaciju kroz stranicu
+            4) <div></div>
+                -grupisanje elemenata bez semantickog znacenja
+                -visina = visina teksta
+                -sirina = sirina roditeljskog elementa
+            5) <br>
+                -novi red
+            6) <h1></h1>, <h2></h2>, ..., <h6></h6>
+                -naslovi
+            7) <hr>
+                -horizontalna linija
+        
+        *FORMULAR*:
+            8) <form></form>
+                -formulari
+                -bitno je da polja uvek imaju ime i vrednost (name i value)
+                *ATRIBUTI*:
+                a) action
+                    dopisao bi odgovore iz forme na url iz actiona (salje se severskoj aplikaciji)
+                b) method
+                    nacin slanja odgovora forme
+                    *OPCIJE*:
+                    I) GET
+                        -default
+                        -dopisuje se na URL
+                    II) POST
+                        -prenose se prek tela http zahteva i mogu da se zastite ako se salju uz pomoc https
+                *PODELEMENTI*:
+                a) <input>
+                    polje u koje se unosi texta
+                    *ATRIBUTI*:
+                    I) type
+                        -oznacava tip polja za unos texta (tip inputa)
+                        *OPCIJE*:
+                            A) text
+                                -obican tekst
+                            B) email
+                                -neophodno @
+                            C) password
+                                -bude u tackicama kad se unosi
+                            D) radio
+                                -daje opcije koje mozemo da oznacimo (samo jednu)
+                                -ako imaju isti name samo jedna moze da bude selektovan
+                                -checked="true": da bude selektovan na pocetku, true=default
+                                -value: dodaje vrednost tom dugmetu koja ce se dodeliti atributu name (npr. name = value)
+                            E) checkbox
+                                -daje opcije koje mozemo da oznacimo (vise njih)
+                                -value: dodaje vrednost tom dugmetu koja ce se dodeliti atributu name (npr. name = value)
+                            F) submit
+                                -salje podatke iz formulara
+                                -value: dodaje vrednost tom dugmetu koja ce se dodeliti atributu name (npr. name = value)
+                            G) date
+                                -biranje datuma iz kalendara
+                                -format godina-mesec-dan
+                    II) name
+                        -oznacava ime tog polja (ime inputa) 
+                b) <label></label>
+                    oznaka koja opisuje neki element forme
+                    *ATRIBUTI*:
+                    I) for
+                        -oznacava na koji element se odnosi labela
+                        -pisemo id elemnta na koga se odnosi
+                c) <select></select>
+                    -biranje jedne opcije od vise ponjudjenih u obliku padajuce liste
+                    *ATRIBUTI*:
+                        I) name
+                            -oznacava ime tog selektora
+                        II) multiple
+                            -ako hocemo da oznacimo vise opcija
+                    *PODELEMENTI*:
+                        I) <option></option>
+                            -sta pise u veb pregledacu
+                            *ATRIBUTI*:
+                                A)value
+                                    -vrednost opcije
+                d) <textarea></textarea>
+                    -ako hocemo text sa vise redova
+                    *ATRIBUTI*:
+                        I) name
+                            -oznacava ime tog selektora
+                        II) rows
+                            -broj redova
+                        III) cols
+                            -broj kolona
+                e) <datalist></datalist>\
+                    -lista u kojoj mozes da izaberes jednu opciju
+                    -potrebno je napraviti dodatni input sa atributima list="id dataliste" i name
+                    *PODELEMENTI*:
+                        I) <option></option>
+                            -sta pise u veb pregledacu
+                            *ATRIBUTI*:
+                                A)value
+                                    -vrednost opcije
+                f) <fieldset></fieldset>
+                    -grupise zajednicke elemente forme (npr. input za ime, input za prezime i input za mejl)
+                    *PODELEMENTI*:
+                        I)<legend></legend>
+                            -naziv fieldseta
+
+        *SLIKA*:
+            9) <img>
+                -slika
+                *ATRIBUTI*:
+                    a) src
+                        -relativna ili apsolutna putanja na sliku
+                    b) alt
+                        -text koji opisuje sta se nalazi na slici
+                    c) width
+                        - sirina slike samo u pixelima
+                    d) height
+                        - visina slike samo u pixelima
+        
+        *LISTA*:
+            10) <ul>/<ul>
+                -nenumerisana lista (unordered list)
+                -blokovski element
+                *PODELEMENTI*:
+                    a) <li></li>
+                        -element liste
+                        -blokovski element
+            11) <ol>/<ol>
+                -numerisana lista (ordered list)
+                -blokovski element
+                *PODELEMENTI*:
+                    a) <li></li>
+                        -element liste
+                        -blokovski element
+                *ATRIBUTI*:
+                    a) start=""
+                        -indeks broja od kog zelimo da nam pocne lista
+            12) <dl>/<dl>
+                -opisne lista (description list)
+                -blokovski element
+                *PODELEMENTI*:
+                    a) <dt></dt>
+                        -pojam / stavka (data term)
+                        -blokovski element
+                    b) <dl></dl>
+                        -opis pojma / stavke (data description)
+                        -blokovski element
+
+        *TABELA*:
+            13) <table></table>
+                -tabela
+                -sastoji se iz redova
+                *PODELEMENTI*:
+                    a) <caption></caption>
+                        -naslov tabele
+                    b) <thead></thead>
+                        -zaglazvlje tabele(prvi red)
+                        *PODELEMENTI*:
+                            I) <th></th>
+                                -polje u zaglazvlju tabele
+                    c) <tbody></tbody>
+                        -telo tabele
+                        -broj redova = ukupno redova - 1
+                        *PODELEMENTI*:
+                            I) <tr></tr>
+                                -redovi u tabeli
+                                *PODELEMENTI*:
+                                    A) <td></td>
+                                        -polje u tabeli
+                                        *ATRIBUTI*:
+                                            1) colspan=""
+                                                -na koliko celija ce red da se rasiri(koliko celija ce da bude veliki)
+                                            2) rowspan=""
+                                                -na koliko celija ce kolona da se rasiri(koliko celija ce da bude velika)
+
+        *VEZE*:
+            1) <a></a>
+                -element koji kada se klikne vodi ka drugoj stranici (anker)
+                -linijski elementi
+                *ATRIBUTI*:
+                    a) href=""
+                        *OPCIJE*:
+                            I) link ka drugoj stranici
+                                -ako hocemo neku vec postojecu stranicu i da nije na nasem kompjuteru moramo da imamo http:// ispred
+                            II) link ka drugoj stranici + identifikator (skoci direktno na indetifikator)
+                    b) target=""
+                    *OPCIJE*:
+                            I) _blank da otvori u novom tabu  
+
+        *OPSTI ATRIBUTI*:
+            1) id="" (svi)
+                -indetifikator, ne sme vide od jednog
+            2) class="" (svi)
+                -indetifikator, sme vise od jednog
+            3) style=""
+                -pravila se primenjuju samo na taj element
+                -ima prednost u odnosu na style svih elemenata i u odnosu na css datoteku
+
+        *JAVASCRIPT*:
+            1)<script></script>
+                -ako hocemo direkno u html da pisemo JAVASCRIPT, pisemo ga ovde(nije preporucljivo)
+                *ATRIBUTI*:
+                    a) src=""
+                        -ako hocemo da napravimo novi fajl za JAVASCRIPT(preporucljivo)
+
+CSS
+    Pravilo sa vecim prioritetom ima prednost
+    Ako imaju isti prioritet, kasnije odredjeno pravilo ima prednost
+    Ako ima !important, ima prednost u ondosu na pravila bez !important
+
+    *OPSTA STANJA ELEMENATA*:
+        1) hover
+            - drzis mis preko elementa
+
+    *PRISTUPANJE ELEMENTIMA*:
+        1) #ime
+            -trazimo id sa imenom
+        2) .ime 
+            - trazimo klasu sa imenom
+        3) p
+            -svi elemnti koji se zovu p
+        4) !important
+            -daje najveci prioritet pravilu, stavlja se na kraju pravila
+        5) div p
+            -nadji prvo sve elemente prvo tipa, pa onda sve elemnte drugog tipa u prvom tipu i na njih primeni stil
+        6) div, span 
+            -primeni stil na oba elementa
+        7) a:link
+            -ako je neki element u nekom stanju (element a u stanju link)
+        8) li::after
+            -napravi pseudoelement koji ne postoji u kodu
+            -after znaci da ide posle elementa navedenog pre ::
+
+    *KUTIJA BLOKOVSKIH ELEMENATA*:
+        1) width
+            -utice samo na sadrzaj blokovskih elemenata
+            -px - u pixelima
+            -...% - toliko posto u odnosu na roditeljsku sirinu
+            -...cm / ...mm
+        2) height
+            -utice samo na sadrzaj blokovskih elemenata
+            -px - u pixelima
+            -...% - toliko posto u odnosu na roditeljsku sirinu
+            -...cm / ...mm
+        3) padding / padding-top / padding-left ....
+            -odvajanje sadrzaj od ivice
+            -px - u pixelima
+            -...% - toliko posto u odnosu na roditeljsku sirinu
+            -...cm / ...mm
+        4) border
+            a) style
+                -obavezan
+            b) width
+                -neobavezan
+                -podrazumevano: 3px
+            c) color
+            d) radius
+                -zaobljenje ivica
+                -podrazumevano: 0px
+            e) collapse
+                -spajanje dve ivice koja su jedna pored druge
+        5) margin
+            -odvaja ostale elemente od ivice html elementa
+            -ne boji se
+            -px - u pixelima
+            -...% - toliko posto u odnosu na roditeljsku sirinu
+            -...cm / ...mm
+            -auto - horizontalno poravnat na sredinu (samo na blokovske )
+        6) vertica-align:
+            -poravnava elemente po zadatom kriterijumu (npr. top, bottom.....)
+
+    *POZICIONIRANJE*:
+        1) position
+            -podrazumevano je static
+            a)absolute
+                -ako ima nekog roditelja koji je ne static onda pomeraj u odnosu na njega
+                -ako nema nekog roditelja koji je ne static onda pomeraj u odnosu na body
+                -ostali elemnti se redjaju kao da ovaj ne postoji(kao da je izvadjen)
+            b)fixed
+                -fisksiran je u odnosu na koordinatni pocetak pregledaca
+                -pomera se skrolovanjem da bi uvek ostajao u istoj tacki
+            c)relative
+                -pomeramo u odnosu na poziciju u kojoj bi bio da je static
+                -ne utice na raspored ostalih elemenata
+            d)static
+                -ne uticu koordinate
+        2) koordinate - top, bottom, left, right ...px
+            a)z-index
+                -utice na to koji element se prikazuje preko kog
+                -utice samo na elemnte koje dele istog roditelja
+                
+    *OPSTE*:
+        1) display
+            -menja tip elementa da li je blokovski ili linijski
+            *OPCIJE*:
+                a)block
+                b)inline
+                c)inline-block
+        2) background-color
+            -menja boju pozadine
+        3) font-size
+            -menja velicinu fonta
+            -u pt-ovima
+        4) text-align
+            -menja poziciju texta
+        5) color
+            -menja boju teksta
+
+    *SLIKA*:
+        1) background-repeat:
+            -da li se ponavlja slika ako je premala
+            *OPCIJE*:
+                a)repeat-y
+                    -po y osi
+                b)repeat-x
+                    - po x osi
+                c)no-repeat
+                    -bez ponavljanja
+        2) background-position
+            -kuda se poavlja
+            *OPCIJE*:
+                a)top
+                    -sredina gore
+                b)top right
+                    - gore desno
+                c)top left
+                    - gore levo
+                d)botom
+                    -sredina dole
+                e)top right
+                    - dole desno
+                f)top left
+                    - dole levo
+                g)center
+                    -sredina
+        3) background-size
+            -velicina pozadinske slike
+            *OPCIJE*:
+                a)...px ...px
+                    -velicina width i height
+                b)cover
+                    -da prekrije vecu dimenziju celu a da kracu dimenziju isece
+                c)contain
+                    -da ubaci celu sliku bez razvlacenja
+
+    *NENUMERISANE LISTE*:
+        1) list-style-type
+            -oblik koji se nalazi ispred svakog elementa liste
+            *OPCIJE*:
+                a)square
+                b)circle
+                c)....
+        2) list-style-image
+            - slika koja se nalazi ispred svakog elementa liste
+        4) list-style-type
+            -da li ce nam se oblik nalaziti u ili van stavke liste
+            *OPCIJE*:
+                a)inside
+                b)outside
+
+    *NUMERISANE LISTE*:
+        1) list-style-type
+            -broj / slovo koji se nalazi ispred svakog elementa liste
+            *OPCIJE*:
+                a)decimal
+                b)lower-(greek, roman, alpha)
+                c)upper-(greek, roman, alpha)
+                d)....
+
+    *TABELE*:
+        1) caption-side
+            -sa koje strane se nalazi naslov
+            *OPCIJE*:
+                a)top
+                b)bottom
+        *STANJA ELEMENTA*:
+            a)first-child 
+                -svako prvo dete u nekom elementu
+            b) last-child
+                -svako poslednje dete u nekom elementu
+            c) nth-child(broj / izraz)
+                -svako n-to dete u nekom elementu
+
+    *LINKOVI*:
+        *STANJA ELEMENTA*:
+            a)link
+                -neposecen
+            b) visited
+                -posecen
+            c) active
+                -kliknes misem
+
+JAVA SCRIPT
+    *PROMENLJIVE*:
+        1) var
+            -ne koristi
+        2) let
+            -moze da se menja vrednost
+        3) const
+            -ne moze da menja vrednost
+
+    *TIPOVI*:
+        1) number
+            -broj
+        2) string
+            -niz karaktera
+        3) boolean
+            -tacno / netacno
+        4) NaN
+            -not a number
+
+    *OPERACIJE*:
+        string1 + string2 = string1string2
+        number * string = number
+        string + number = string
+        string - number = number
+    
+    *FUNKCIJE*:
+        1) console.log(nesto)
+            -ispisi nesto na konzoli
+        2) typeof(promenljiva)
+            -vraca tip te promenljive
+        3) Number.parseInt(promenljiva)
+            -konvertovanje promenljive u int
+        4) Number.isNaN(promenljiva)
+            -proverava da li je broj NaN
+        5) Math.random()
+            -random broj izmedju 0, 1
+            -ako hocemo random broj u nekom intervalu, pomnozimo Math.random() sa razlikom granicama intervala i onda dodamo donju granicu intervala
+        6) Math.floor()
+            -vraca zaokruzen broj bez decimala
+        7) objekat.lenght()
+            -broj karaktera
+        8) objekat.indexof()
+            -vraca indeks tog elementa
+        9) objekat.slice(pocetak, kraj)
+            -vraca podnisku od zadatog pocetka do kraja
+        10) objekat.replace(nesto, sa necim)
+            -vraca objekat u kojoj je nesto zamenjeno sa necim
+        11) objekat.toUpperCase();
+            -vraca objekat sa svim velikim slovima
+        12) objekat.toLowerCase();
+            -vraca objekat sa svim malim slovima
+        13) objekat.trim()
+            -vraca objekat bez belina
+        14) objekat.charAt(broj)
+            -vraca string na toj poziciji
+        15) objekat.push()
+            -ubacuje u niz
+        16) objekat.pop()
+            -izbacuje iz niza
+        17) objekat.split('nesto')
+            -funckcija vraca niz u kojem se nalazi podeljen string na osnovu dataog nesto
+        18) objekat.join()
+            -spaja sve elemente niza u nisku
+            -defaultno ih spaja zarezima, a kao argument funckcije mozemo da posaljemo string koji ce da se nalazi izmedju svaka 2 clana niza
+        19) objekat.indeksOf(nesto)
+            -vraca indeks prvog po javljivanja necega
+            -ako hocemo drugo pojavljivanje, uradimo prvi indeksOf, a onda njegovu povratnu vrednost + 1 posalje kao drugi argument indeksOf metode
+
+    *DOM FUNKCIJE*:
+        1) document.getElementById(niska)
+            -nalazi element u html DOM stablu sa id niskom
+            -vraca null ako ne nadje !!!!!!!!!!!!!!!!!!!!
+            -uvek proveriti da li je nasao(da li je == null)
+        2) document.getElementsByTagName(niska)
+            -vraca niz cvorova u DOM stablu koji odgovaraju nisci (ako je niska = p, vraca niz paragrafa)
+            -ako nema elemenata vraca PRAZAN NIZ !!!!!!!!!!!!!!!!!!
+        3) document.getElementsByClassName(niska)
+            --vraca niz cvorova u DOM stablu ciji elementi sadrze klasu koja odgovaraju nisci
+            -ako nema elemenata vraca PRAZAN NIZ !!!!!!!!!!!!!!!!!!
+        4) document.getElementsByTagName(niska)
+            --vraca niz cvorova u DOM stablu ciji nazivi elemenata odgovaraju prosledjeenooj nisci
+            -ako nema elemenata vraca PRAZAN NIZ !!!!!!!!!!!!!!!!!!
+        5) document.querySelector(css selektor)
+            -vraca prvi element na koji naidje a da sadrzi odgovarajuci css selektor
+            -vraca null ako ne nadje !!!!!!!!!!!!!!!!!!!!
+            -npr p.parni, .parni, div p, a:hover....
+        6) document.querySelectorAll(css selektor)
+            -vraca niz elemenata koji sadrze odgovarajuci css selektor
+            -ako nema elemenata vraca PRAZAN NIZ !!!!!!!!!!!!!!!!!!
+            -npr p.parni, .parni, div p, a:hover....
+        7) element.innerHTML
+            -ako element postoji, vraca text koji se nalazi u tom elementu
+            -npr. <p id="prvi">Ovo je primer</p>, prvi.innerHTML vraca Ovo je primer
+            -text mozemo da menjamo sa prvi.innerHTML = 'Ovo je drugi primer'
+            -mozemo da ubacujemo i druge html elemente kao npr. prvi.innerHTML = '<img src="../download.jpeg">'
+            -jaaaaaako neefikasno
+            -nikad ne koristimo
+        8) element.outerHTML
+            -ako element postoji, vraca ceo taj element
+            -mozemo da promenimo ceo element koristeci ovaj metod npr. prvi.outerHTML = '<img src="../download.jpeg">'
+            -jaaaaaako neefikasno
+            -nikad ne koristimo
+        9) objekat.style
+            -pristupamo styleu objekta
+            -ako hocemo konkretnom stilu onda kucamo objekat.style.koji_zelimo(npr. height, background-color .....)
+            -konkretne stvari se pisu kamiljom notacijom umesto sa crtom(npr. background-color=backgroundColor ....)
+            -povratna vrednost uvek niska
+            -ako hocemo da izmenimo stil pisemo u obliku niske (npr. div.style.height = '200px')
+        10) objekat.className
+            -vraca nisku svih klasa jednog objekta
+        11) objekat.classList
+            -vraca niz svih klasa jednog objekta
+        12) document.createElement('html element');
+            -vraca napravljen cvor koji ima ime kao prosledjeni html element
+        13) document.createTextNode('text')
+            -vraca tekstualni cvor koji u sebi sadzri poslati text
+        14) nesto.appendChild(nestoDrugo)
+            -poziva se nad cvorom roditelja i nadovezuje dete na njega(u ovom slucaju nadovezuje nestoDrugo na nesto)
+        15) roditelj.removeChild(dete)
+            -poziva se nad cvorom roditelja i ukljanja poslato dete
+            -ako brisemo vise elemenata kroz petlju potrebno je da idemo od najveceg elementa niza pa do najmanjeg da tokom smanjiivanja ne bi doslo do problema sa velicinom niza
+        16) roditelj.children
+            -vraca niz svih direktnih potomaka
+        17) objekat.tagName
+            -vraca ime objekta u capslock (ako je objekat paragraf vraca P, ako je div vraca DIV....)
+        18) roditelj.replaceChild(novi element, stari element)
+            -menja stari element sa novim elementom
+
+MOONGODB
+
+    *PRONALAZENJE*:
+        1) model.find(JEDAN_ILI_VISE_OBJEKATA)
+            - VISE_OBJEKATA IZGLEDAJU OVAKO : &operator [{JEDAN_OBJEKAT}, {DRUGI_OBJEKAT}, .....]
+                Operator: 
+                    a) &and:
+                        - i
+                    b) &or
+                        - ili
+                    c) &not
+                        - ne zadovoljavaju uslove
+            - JEDAN_OBJEKAT izgleda ovako : { polje_iz_baze : NESTO }
+                Opcije za NESTO:
+                    a) broj / "string"
+                        -ako trazimo konkretan broj ili string
+                    b) /^Pa/
+                        - svi koji pocinju sa Pa
+                    c) /ic$/
+                        - svi koji se zavrsavaju na ic
+                    d) /an/
+                        -svi koji sadrze an
+                    e) {objekat}
+                        Opcije za objekat:
+                            A) &gt: / &gte:
+                                - veci / veci ili jednak
+                            B) &lt: / &lte:
+                                - manji / manji ili jednak
+                            C) &ne:
+                                - nije jednak
+                            D) &in : [opcije]
+                                - jedan od
+            - mozemo i da sortiramo pronadjene elemente
+            -to radimo sa:
+                -model.find(...).sort({nesto : 1 / -1, nesto_drugo : 1 / -1})
+                    - umesto nesto pisemo po kom polju zelimo da sortiramo
+                    - umesto nesto_drugo pisemo ako zelimo drugi kriterijum za sortiranje u slucaju da se poklapaju po prvom    
+                    - 1 ako zelimo da sortiramo rastuce
+                    - -1 ako zelimo da sortiramo opadajuce
+        2) model.findById(id)
+            - trazi studenta po _id
+
+    *MENJANJE*:
+        1) model.updateMany({uslov}, {menjanje})
+            a) uslov
+                - izgleda ovako : { polje_iz_baze : NESTO }
+                    Opcije za NESTO:
+                        A) broj / "string"
+                            -ako trazimo konkretan broj ili string
+                        B) /^Pa/
+                            - svi koji pocinju sa Pa
+                        C) /ic$/
+                            - svi koji se zavrsavaju na ic
+                        D) /an/
+                            -svi koji sadrze an
+                        E) {objekat}
+                            Opcije za objekat:
+                                I) &gt: / &gte:
+                                    - veci / veci ili jednak
+                                II) &lt: / &lte:
+                                    - manji / manji ili jednak
+                                III) &ne:
+                                    - nije jednak
+                                IV) &in : [opcije]
+                                    - jedan od
+            b)menjanje
+                - ovde menjamo polja iz baze
+                Opcije:
+                    a) $set : {polje_iz_baze : broj / "string", polje_iz_baze : broj / "string", ....}
+                        - postavi polje_iz_baze na vrednost broj / "string"
+                    b) $inc : {polje_iz_baze : + / - bro, polje_iz_baze : broj / "string", ....}
+                        - povecaj polje_iz_baze za broj
+                        - umanji polje_iz_baze za -broj
+
+        2) model.updateOne({uslov}, {menjanje})
+            - isto kao updateMany samo radi za prvog koji naidje sa zadatim uslovom
+    
+    *BRISANJE*:
+        1) model.deleteOne / deleteMany({kriterijum})
+            - brise prvog / sve sa zadatim kriterijumom
+            - kriterijum izgleda ovako : { polje_iz_baze : NESTO , polje_iz_baze : NESTO, ......}
+                Opcije za NESTO:
+                    a) broj / "string"
+                        -ako trazimo konkretan broj ili string
+                    b) /^Pa/
+                        - svi koji pocinju sa Pa
+                    c) /ic$/
+                        - svi koji se zavrsavaju na ic
+                    d) /an/
+                        -svi koji sadrze an
+                    e) {objekat}
+                        Opcije za objekat:
+                            A) &gt: / &gte:
+                                - veci / veci ili jednak
+                            B) &lt: / &lte:
+                                - manji / manji ili jednak
+                            C) &ne:
+                                - nije jednak
+                            D) &in : [opcije]
+                                - jedan od
