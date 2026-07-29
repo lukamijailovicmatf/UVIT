@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+</head>
+<body>
+
+    <a href="/hello"> Izloguj se </a>
+
+    <% if (student == null) { %>
+        <h1> Neuspesno prijavljivanje! </h1>
+    <% } else { %>
+        <h1> <%= student.ime %> </h1>
+        <p> Smer: <%= student.smer %> </p>
+        <p> Godina: <%= student.godina %> </p>
+        <p> Sifra: <%= '*'.repeat(student.sifra.length) %> </p>
+        <table>
+        <% for (let ispit of student.ispiti) { %>
+                <tr>
+                    <td> <%= ispit.predmet %> </td>
+                    <td> <%= ispit.ocena %> </td>
+                </tr>
+        <% } %>
+        </table>
+
+        <%
+            let prosek = 0
+            for (let ocena of student.ispiti) {
+                prosek = prosek + ocena
+            }
+            if (student.ispiti.length > 0) {
+                prosek = prosek / student.ispiti.length
+            }
+        %>
+
+        <p> Prosek: <%= prosek %> </p>
+
+        <h2>Promeni podatke</h2>
+        <form method="post" action="/student/update">
+            Ime <input type="text" name="ime" value="<%= student.ime %>" readonly> <br>
+            Sifra <input type="password" name="sifra" value="<%= student.sifra %>"> <br>
+            Smer <input type="text" name="smer" value="<%= student.smer %>"> <br>
+            Godina <input type="number" name="godina" value="<%= student.godina %>"> <br>
+            <input type="submit" value="Promeni">
+        </form>
+
+        <h2>Obrisi podatke</h2>
+        <form method="post" action="/student/delete">
+            <input type="text" name="ime" value="<%= student.ime %>" hidden> <br>
+            <input type="submit" value="obrisi">
+        </form>
+
+    <% } %>
+
+</body>
+</html>

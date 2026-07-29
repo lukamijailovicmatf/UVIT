@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h1>Hello</h1>
+
+    <!-- <form method="get" action="/student">
+        Ime
+        <input type="text" name="ime"> <br>
+        Sifra
+        <input type="password" name="sifra"> <br>
+        <input type="submit">
+    </form> -->
+
+    <form method="post" action="/student">
+        Ime
+        <input type="text" name="username" id="ime"> <br>
+        Sifra
+        <input type="password" name="password" id="sifra"> <br>
+        <input type="submit" value="Prijavi se">
+    </form>
+
+    <ul>
+        <% for (let s of studenti) { %>
+                <li> <%= s %> </li>
+        <% } %>
+    </ul>
+
+    <script src="index.js"></script>
+</body>
+</html>

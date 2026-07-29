@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+</head>
+<body>
+
+    <% if (student == null) { %>
+        <h1>Neuspesno prijavljivanje!</h1>
+    <% } else { %>
+        <h1> <%= student.ime %> </h1>
+        <table>
+        <% for (let ispit of student.ispiti) { %>
+                <tr>
+                    <td> <%= ispit.predmet %> </td>
+                    <td> <%= ispit.ocena %> </td>
+                </tr>
+        <% } %>
+        </table>
+    <% } %>
+
+</body>
+</html>

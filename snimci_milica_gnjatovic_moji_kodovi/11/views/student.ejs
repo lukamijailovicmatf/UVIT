@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+</head>
+<body>
+
+    <a href="/hello"> Izloguj se </a>
+
+    <% if (student == null) { %>
+        <h1> Neuspesno prijavljivanje! </h1>
+    <% } else { %>
+        <form method="get" action="/exams">
+            <input type="text" name="username" value="<%= student.username %>" hidden>
+            <input type="submit" value="ispiti">
+        </form>
+        <h1> <%= student.name %> <%= student.surname %> </h1>
+        <p> Smer: <%= student.major %> </p>
+        <p> Napomena: <%= student.note %> </p>
+        <p> Sifra: <%= '*'.repeat(student.password.length) %> </p>
+
+        <p> Prosek: <%= student.avg_grade %> </p>
+
+        <h2>Promeni podatke</h2>
+        <form method="post" action="/student/update">
+            Ime <input type="text" name="username" value="<%= student.username %>" readonly> <br>
+            Sifra <input type="password" name="password" value="<%= student.password %>"> <br>
+            Smer <input type="text" name="major" value="<%= student.major %>"> <br>
+            Napomena <input type="text" name="note" value="<%= student.note %>"> <br>
+            <input type="submit" value="Promeni">
+        </form>
+
+        <h2>Obrisi podatke</h2>
+        <form method="post" action="/student/delete">
+            <input type="text" name="username" value="<%= student.username%>" hidden> <br>
+            <input type="submit" value="obrisi">
+        </form>
+
+    <% } %>
+
+</body>
+</html>
